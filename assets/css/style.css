@@ -226,7 +226,8 @@ header nav {
 
 .services .title,
 .case-studies .title,
-.working-process .title {
+.working-process .title,
+.teams .title {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -459,6 +460,11 @@ header nav {
   opacity: 0;
 }
 
+
+.teams {
+  margin-top: 60px;
+}
+
 @media only screen and (max-width: 320px) {
   .case-studies .embla__container {
     gap: 8px;
@@ -500,7 +506,8 @@ header nav {
 
   .services .title,
   .case-studies .title,
-  .working-process .title {
+  .working-process .title,
+  .teams .title {
     flex-direction: row;
     align-items: center;
     text-align: left;
@@ -646,7 +653,8 @@ header nav {
 
   .services .title p,
   .case-studies .title p,
-  .working-process .title p {
+  .working-process .title p,
+  .teams .title {
     width: 50%;
   }
 
@@ -677,6 +685,10 @@ header nav {
   .case-studies .embla__slide .content {
     width: 90%;
     padding: 0;
+  }
+
+  .teams {
+    margin-top: 140px;
   }
 }
 /*Desktop*/
