@@ -10,7 +10,8 @@ const options = {
   breakpoints: {
     "(min-width: 1024px)": { active: false },
   },
-  align: "start"
+  align: "start",
+  dragFree: true
 };
 const emblaApi = EmblaCarousel(emblaNode, options);
 

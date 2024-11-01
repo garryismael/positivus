@@ -56,7 +56,7 @@
 .embla__container {
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: 80%;
+  grid-auto-columns: 90%;
 }
 
 h1 {
@@ -345,6 +345,7 @@ header nav {
   background: var(--dark);
   color: white;
   border-radius: 40px;
+  margin-right: 20px;
 }
 
 .case-studies .embla__slide .content {
@@ -359,10 +360,6 @@ header nav {
   align-items: center;
   flex-wrap: nowrap;
   gap: 15px;
-}
-
-.case-studies .embla__container {
-  gap: 20px;
 }
 
 .case-studies .embla__slide a {
@@ -466,10 +463,11 @@ header nav {
 }
 
 @media only screen and (max-width: 320px) {
-  .case-studies .embla__container {
-    gap: 8px;
+  .case-studies .embla__container .embla__slide{
+    margin-right: 8px;
   }
-  .embla__container {
+
+  .case-studies .embla__container {
     grid-auto-columns: 95%;
   }
 
