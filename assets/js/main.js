@@ -156,6 +156,12 @@ const addDotBtnsAndClickHandlers = (emblaApi, dotsNode) => {
   };
 };
 
+
+function toggleRadio(selected) {
+  document.querySelectorAll('.radio').forEach(radio => radio.classList.remove('active'));
+  selected.classList.add('active');
+}
+
 const removePrevNextBtnsClickHandlers = addPrevNextBtnsClickHandlers(
   emblaApiTestimonial,
   prevButtonNode,

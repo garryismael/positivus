@@ -15,6 +15,26 @@
   text-decoration: none;
 }
 
+.input-field {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input-field input,
+.input-field textarea {
+  width: 100%;
+  padding: 28px 20px;
+  border: 2px solid var(--dark);
+  border-radius: 14px;
+  outline: none;
+}
+
+.input-field input:focus,
+.input-field textarea:focus {
+  border: 2px solid var(--green);
+}
+
 .services .cards .card,
 .working-process .accordions .container,
 .teams .cards .card {
@@ -236,7 +256,8 @@ header nav {
 .case-studies .title,
 .working-process .title,
 .teams .title,
-.testimonials .title {
+.testimonials .title,
+.contact .title {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -469,6 +490,7 @@ header nav {
 }
 
 .teams {
+  padding-top: 40px;
   .cards {
     .card {
       display: none;
@@ -530,7 +552,6 @@ header nav {
 
 .testimonials {
   padding-top: 40px;
-  padding-bottom: 100px;
 
   .embla {
     position: relative;
@@ -658,6 +679,87 @@ header nav {
   }
 }
 
+.contact {
+  .title {
+    padding-top: 40px;
+  }
+
+  .form-container {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0,1fr));
+    grid-auto-rows: 1fr;
+    align-items: center;
+    margin-top: 40px;
+    form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      .inputs-container {
+        position: relative;
+        background: var(--gray);
+        border-radius: 45px;
+        padding: 40px 30px;
+        .inputs {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          width: 100%;
+          .radios {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding-bottom: 16px;
+
+            .radio__container {
+              display: flex;
+              gap: 16px;
+
+              .radio {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 28px;
+                height: 28px;
+                border: 1px solid var(--dark);
+                border-radius: 50%;
+
+                .inner {
+                  border-radius: 50%;
+                }
+                .inner {
+                  width: 16px;
+                  height: 16px;
+                }
+              }
+
+              .radio.active {
+                .inner {
+                  background: var(--green);
+                }
+              }
+            }
+          }
+
+          textarea {
+            height: 132px;
+          }
+        }
+      }
+      button {
+        width: 100%;
+        margin-top: 30px;
+      }
+    }
+
+    .img {
+      display: none;
+      flex: 0 0 50%;
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
 @media only screen and (max-width: 320px) {
   .case-studies .embla__container .embla__slide {
     margin-right: 8px;
@@ -695,6 +797,23 @@ header nav {
       }
     }
   }
+
+  .contact {
+    & .form-container {
+      form {
+        .inputs-container {
+          .inputs {
+            .radios {
+              flex-direction: column;
+              align-items: flex-start;
+              justify-content: flex-start;
+              gap: 24px;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 /*Tablet*/
@@ -714,7 +833,8 @@ header nav {
   .case-studies .title,
   .working-process .title,
   .teams .title,
-  .testimonials .title {
+  .testimonials .title,
+  .contact .title {
     flex-direction: row;
     align-items: center;
     text-align: left;
@@ -824,9 +944,23 @@ header nav {
     display: block;
   }
 
-  .cta .cta-img img{
+  .cta .cta-img img {
     width: 100%;
     height: auto;
+  }
+
+  .contact {
+    & .form-container {
+      & form {
+        & .inputs {
+          .radios {
+            align-items: center;
+            justify-content: flex-start;
+            gap: 64px;
+          }
+        }
+      }
+    }
   }
 }
 /*Laptop */
@@ -921,7 +1055,8 @@ header nav {
   .case-studies .title p,
   .working-process .title p,
   .teams .title,
-  .testimonials .title {
+  .testimonials .title,
+  .contact .title {
     width: 63%;
   }
 
@@ -990,6 +1125,51 @@ header nav {
     .navigations {
       padding-top: 72px;
       padding-bottom: 64px;
+    }
+  }
+
+  .contact {
+    .form-container {
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      margin-top: 40px;
+      background: var(--gray);
+      border-radius: 45px;
+      padding: 60px 0 80px 100px;
+      form {
+        gap: 32px;
+        .inputs-container {
+          background: none;
+          border-radius: 0;
+          display: flex;
+          align-items: center;
+          overflow: hidden;
+          padding: 0;
+
+          .inputs {
+            flex-direction: column;
+
+            .radios {
+              justify-content: flex-start;
+            }
+          }
+        }
+
+        button {
+          width: unset;
+          margin-top: 0;
+        }
+      }
+
+      .img {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        img {
+          max-width: 100%;
+          height: auto;
+        }
+      }
     }
   }
 }
