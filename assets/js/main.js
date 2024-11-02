@@ -3,6 +3,8 @@ const container = document.getElementsByClassName("container");
 const acc = document.getElementsByClassName("accordion");
 const panels = document.getElementsByClassName("panel");
 const paragraphs = document.querySelectorAll(".panel > p");
+const showTeamsBtn = document.querySelector(".teams button");
+const teamCards = document.querySelectorAll(".teams .cards .card");
 
 const options = {
   loop: false,
@@ -11,7 +13,7 @@ const options = {
     "(min-width: 1024px)": { active: false },
   },
   align: "start",
-  dragFree: true
+  dragFree: true,
 };
 const emblaApi = EmblaCarousel(emblaNode, options);
 
@@ -40,3 +42,10 @@ for (let i = 0; i < container.length; i++) {
     }
   });
 }
+
+showTeamsBtn.addEventListener("click", (event) => {
+  teamCards.forEach((card) => {
+    card.style.display = "block";
+  });
+  event.currentTarget.style.display = "none";
+});
