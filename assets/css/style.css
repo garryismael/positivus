@@ -460,10 +460,6 @@ header nav {
   opacity: 0;
 }
 
-.teams {
-  margin-top: 60px;
-}
-
 .teams .cards {
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -808,6 +804,30 @@ header nav {
       }
     }
   }
+
+  .cta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+  }
+
+  .cta .texts {
+    flex: 0 0 42%;
+  }
+
+  .cta .texts button {
+    width: fit-content;
+  }
+
+  .cta .cta-img {
+    display: block;
+  }
+
+  .cta .cta-img img{
+    width: 100%;
+    height: auto;
+  }
 }
 /*Laptop */
 @media (min-width: 1024px) {
@@ -882,6 +902,10 @@ header nav {
     height: 48px;
   }
 
+  .cta {
+    justify-content: space-around;
+  }
+
   .services .cards {
     padding-top: 80px;
   }
@@ -898,13 +922,18 @@ header nav {
   .working-process .title p,
   .teams .title,
   .testimonials .title {
-    width: 50%;
+    width: 63%;
+  }
+
+  .case-studies {
+    padding-top: 140px;
   }
 
   .case-studies .embla {
     background: var(--dark);
     border-radius: 45px;
     padding: 70px 60px;
+    margin-top: 80px;
   }
 
   .case-studies .divider-y {
@@ -930,11 +959,29 @@ header nav {
     padding: 0;
   }
 
+  .working-process {
+    padding-top: 140px;
+  }
+
+  .working-process .accordions {
+    margin-top: 80px;
+  }
+
   .teams {
-    margin-top: 140px;
+    padding-top: 140px;
+  }
+
+  .teams .cards {
+    margin-top: 80px;
   }
 
   .testimonials {
+    margin-top: 100px;
+
+    .embla {
+      margin-top: 80px;
+    }
+
     .embla__container {
       grid-auto-columns: 50%;
       grid-auto-rows: 1fr;
