@@ -782,7 +782,9 @@ header nav {
   }
 
   .teams .cards {
+    margin-top: 80px;
     grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 40px;
   }
 }
 /*Desktop*/
