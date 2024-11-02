@@ -2,6 +2,7 @@ const emblaCaseStudies = document.querySelector(".case-studies .embla");
 const emblaTestimonials = document.querySelector(".testimonials .embla");
 const btnMenu = document.querySelector(".btn-menu");
 const nav = document.querySelector("nav");
+const body = document.querySelector("body");
 
 const prevButtonNode = document.querySelector(".embla__prev");
 const nextButtonNode = document.querySelector(".embla__next");
@@ -179,4 +180,5 @@ emblaApiTestimonial.on("destroy", removeDotBtnsAndClickHandlers);
 
 btnMenu.addEventListener("click", () => {
   nav.classList.toggle("active");
+  body.classList.toggle("active");
 });

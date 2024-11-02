@@ -199,10 +199,9 @@ body {
   overflow-x: hidden;
 }
 
-.btn-menu {
-  border: none;
-  position: relative;
-  z-index: 40;
+
+body.active {
+  overflow: hidden;
 }
 
 header {
@@ -217,6 +216,13 @@ header nav {
   display: none;
 }
 
+header .btn-menu {
+  border: none;
+  position: relative;
+  background: transparent;
+  z-index: 40;
+}
+
 header nav a {
   color: var(--dark);
   text-wrap: nowrap;
@@ -227,7 +233,7 @@ header nav.active {
   position: fixed;
   bottom: 0;
   left: 0;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   background: var(--gray);
   z-index: 40;
@@ -243,12 +249,9 @@ header nav.active ul {
   gap: 24px;
 }
 
-header nav.active + i {
-  display: block;
-  background: red;
-  position: absolute;
-  right: 30px;
-  top: 30px;
+header nav.active + button {
+  position: fixed;
+  right: 20px;
 }
 
 .logo {
