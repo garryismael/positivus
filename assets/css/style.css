@@ -550,13 +550,21 @@ header nav {
 
   .content {
     position: relative;
+    display: flex;
+    flex-direction: column;
     color: var(--white);
+    flex: 1;
+    height: 100%;
+    gap: 40px;
 
     .speech-bubble {
       position: relative;
+      flex: 1;
+      height: 100%;
       border: 2px solid var(--green);
       border-radius: 45px;
       padding: 30px;
+      gap: 40px;
 
       &::before,
       &::after {
@@ -590,8 +598,7 @@ header nav {
     .user {
       position: relative;
       left: 25%;
-      margin-top: 40px;
-      padding-right: 24px;
+      padding-right: 36px;
 
       h4 {
         color: var(--green);
@@ -864,17 +871,8 @@ header nav {
 
   .testimonials {
     .embla__container {
-      grid-auto-columns: 60%;
+      grid-auto-columns: 50%;
       grid-auto-rows: 1fr;
-    }
-  }
-
-  .testimonials {
-    .content {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      height: 100%;
     }
   }
 }

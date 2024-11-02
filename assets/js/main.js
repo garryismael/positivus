@@ -22,6 +22,7 @@ const testimonialOptions = {
   loop: false,
   active: true,
   align: "start",
+  dragFree: true,
 };
 
 const emblaApi = EmblaCarousel(emblaCaseStudies, caseStudiesOptions);
