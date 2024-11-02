@@ -537,10 +537,11 @@ header nav {
   padding-bottom: 100px;
 
   .embla {
+    position: relative;
     background: var(--dark);
     border-radius: 45px;
     margin-top: 40px;
-    padding: 30px;
+    padding: 30px 30px 0 30px;
   }
 
   .embla__container {
@@ -603,6 +604,59 @@ header nav {
       h4 {
         color: var(--green);
         padding-bottom: 4px;
+      }
+    }
+  }
+
+  .navigations {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 50px 0px;
+    gap: 0;
+
+    button.embla__prev,
+    button.embla__next {
+      display: flex;
+      align-items: center;
+      height: 24px;
+      width: 24px;
+      border: none;
+      background: transparent;
+
+      i {
+        color: var(--white);
+      }
+
+      &:disabled {
+        i {
+          color: rgba(255, 255, 255, 0.3);
+        }
+      }
+    }
+
+    .embla__dots {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      gap: 20px;
+
+      button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        background: transparent;
+      }
+
+      .embla__dot--selected {
+        svg {
+          path {
+            fill: var(--green);
+          }
+        }
       }
     }
   }
@@ -743,6 +797,17 @@ header nav {
   .teams button {
     display: none;
   }
+
+  .testimonials {
+    .navigations {
+      justify-content: center;
+      gap: 64px;
+
+      .embla__dots {
+        width: fit-content;
+      }
+    }
+  }
 }
 /*Laptop */
 @media (min-width: 1024px) {
@@ -874,6 +939,11 @@ header nav {
       grid-auto-columns: 50%;
       grid-auto-rows: 1fr;
     }
+
+    .navigations {
+      padding-top: 72px;
+      padding-bottom: 64px;
+    }
   }
 }
 /*Desktop*/
@@ -887,6 +957,12 @@ header nav {
     margin-top: 80px;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 40px;
+  }
+
+  .testimonials {
+    .navigations {
+      gap: 189px;
+    }
   }
 }
 /*Big screen*/
