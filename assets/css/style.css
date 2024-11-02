@@ -476,7 +476,6 @@ header nav {
     .card {
       display: none;
       padding: 40px 50px;
-      transition: opacity 0.3s ease, height 0.3s ease;
       .user {
         position: relative;
         display: flex;
@@ -558,13 +557,13 @@ header nav {
     margin: 0;
   }
 
-  .teams{
+  .teams {
     .cards {
       .user {
         flex-direction: column;
 
         > div {
-          align-self: flex-start!important;
+          align-self: flex-start !important;
         }
       }
     }
@@ -651,6 +650,16 @@ header nav {
 
   .teams .cards .card {
     display: block;
+  }
+
+  .cards {
+    .card {
+      .user {
+        > a {
+          right: 0!important;
+        }
+      }
+    }
   }
 
   .teams button {
@@ -780,18 +789,18 @@ header nav {
   .teams {
     margin-top: 140px;
   }
-
-  .teams .cards {
-    margin-top: 80px;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 40px;
-  }
 }
 /*Desktop*/
 @media (min-width: 1280px) {
   .case-studies .embla__container {
     grid-auto-rows: 1fr;
     gap: 64px;
+  }
+
+  .teams .cards {
+    margin-top: 80px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 40px;
   }
 }
 /*Big screen*/
