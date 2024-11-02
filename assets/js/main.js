@@ -1,4 +1,6 @@
-const emblaNode = document.querySelector(".embla");
+const emblaCaseStudies = document.querySelector(".case-studies .embla");
+const emblaTestimonials = document.querySelector(".testimonials .embla");
+
 const container = document.getElementsByClassName("container");
 const acc = document.getElementsByClassName("accordion");
 const panels = document.getElementsByClassName("panel");
@@ -6,7 +8,7 @@ const paragraphs = document.querySelectorAll(".panel > p");
 const showTeamsBtn = document.querySelector(".teams button");
 const teamCards = document.querySelectorAll(".teams .cards .card");
 
-const options = {
+const caseStudiesOptions = {
   loop: false,
   active: true,
   breakpoints: {
@@ -15,7 +17,18 @@ const options = {
   align: "start",
   dragFree: true,
 };
-const emblaApi = EmblaCarousel(emblaNode, options);
+
+const testimonialOptions = {
+  loop: false,
+  active: true,
+  align: "start",
+};
+
+const emblaApi = EmblaCarousel(emblaCaseStudies, caseStudiesOptions);
+const emblaApiTestimonial = EmblaCarousel(
+  emblaTestimonials,
+  testimonialOptions
+);
 
 // Accordions
 for (let i = 0; i < container.length; i++) {

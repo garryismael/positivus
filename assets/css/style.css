@@ -534,6 +534,71 @@ header nav {
 
 .testimonials {
   padding-top: 40px;
+  padding-bottom: 100px;
+
+  .embla {
+    background: var(--dark);
+    border-radius: 45px;
+    margin-top: 40px;
+    padding: 30px;
+  }
+
+  .embla__container {
+    grid-auto-columns: 100%;
+    gap: 50px;
+  }
+
+  .content {
+    position: relative;
+    color: var(--white);
+
+    .speech-bubble {
+      position: relative;
+      border: 2px solid var(--green);
+      border-radius: 45px;
+      padding: 30px;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+      }
+
+      &:before {
+        bottom: 0;
+        left: 25%;
+        border: 22px solid transparent;
+        border-top-color: var(--green);
+        border-bottom: 0;
+        margin-left: -22px;
+        margin-bottom: -22px;
+      }
+
+      &:after {
+        bottom: 1px;
+        left: 25%;
+        border: 20px solid transparent;
+        border-top-color: var(--dark);
+        border-bottom: 0;
+        margin-left: -20px;
+        margin-bottom: -20px;
+      }
+    }
+
+    .user {
+      position: relative;
+      left: 25%;
+      margin-top: 40px;
+      padding-right: 24px;
+
+      h4 {
+        color: var(--green);
+        padding-bottom: 4px;
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 320px) {
@@ -795,6 +860,22 @@ header nav {
 
   .teams {
     margin-top: 140px;
+  }
+
+  .testimonials {
+    .embla__container {
+      grid-auto-columns: 60%;
+      grid-auto-rows: 1fr;
+    }
+  }
+
+  .testimonials {
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
   }
 }
 /*Desktop*/
