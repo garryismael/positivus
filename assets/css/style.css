@@ -235,7 +235,8 @@ header nav {
 .services .title,
 .case-studies .title,
 .working-process .title,
-.teams .title {
+.teams .title,
+.testimonials .title {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -531,6 +532,10 @@ header nav {
   }
 }
 
+.testimonials {
+  padding-top: 40px;
+}
+
 @media only screen and (max-width: 320px) {
   .case-studies .embla__container .embla__slide {
     margin-right: 8px;
@@ -586,7 +591,8 @@ header nav {
   .services .title,
   .case-studies .title,
   .working-process .title,
-  .teams .title {
+  .teams .title,
+  .testimonials .title {
     flex-direction: row;
     align-items: center;
     text-align: left;
@@ -656,7 +662,7 @@ header nav {
     .card {
       .user {
         > a {
-          right: 0!important;
+          right: 0 !important;
         }
       }
     }
@@ -753,7 +759,8 @@ header nav {
   .services .title p,
   .case-studies .title p,
   .working-process .title p,
-  .teams .title {
+  .teams .title,
+  .testimonials .title {
     width: 50%;
   }
 
