@@ -407,8 +407,7 @@ header nav.active + .btn-menu span.third {
 }
 
 .services {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 100px;
 }
 
 .services .title,
@@ -501,6 +500,10 @@ header nav.active + .btn-menu span.third {
   background: var(--gray);
 }
 
+.cta {
+  padding-top: 100px;
+}
+
 .cta-container {
   background: var(--gray);
   padding: 50px;
@@ -520,7 +523,7 @@ header nav.active + .btn-menu span.third {
 }
 
 .case-studies {
-  padding-top: 60px;
+  padding-top: 100px;
 }
 
 .case-studies .embla {
@@ -839,6 +842,7 @@ header nav.active + .btn-menu span.third {
 }
 
 .contact {
+  padding-top: 100px;
   .title {
     padding-top: 40px;
   }
@@ -1371,10 +1375,17 @@ footer {
     height: 48px;
   }
 
+  .cta {
+    padding-top: 140px;
+  }
+
   .cta-container{
     justify-content: space-around;
   }
 
+  .services {
+    padding-top: 140px;
+  }
   .services .cards {
     padding-top: 80px;
   }
@@ -1464,6 +1475,7 @@ footer {
   }
 
   .contact {
+    padding-top: 140px;
     .form-container {
       grid-template-columns: repeat(2, minmax(0, 1fr));
       margin-top: 40px;
