@@ -159,10 +159,11 @@ const addDotBtnsAndClickHandlers = (emblaApi, dotsNode) => {
   };
 };
 
-
 function toggleRadio(selected) {
-  document.querySelectorAll('.radio').forEach(radio => radio.classList.remove('active'));
-  selected.classList.add('active');
+  document
+    .querySelectorAll(".radio")
+    .forEach((radio) => radio.classList.remove("active"));
+  selected.classList.add("active");
 }
 
 const removePrevNextBtnsClickHandlers = addPrevNextBtnsClickHandlers(
@@ -179,6 +180,12 @@ emblaApiTestimonial.on("destroy", removePrevNextBtnsClickHandlers);
 emblaApiTestimonial.on("destroy", removeDotBtnsAndClickHandlers);
 
 btnMenu.addEventListener("click", () => {
-  nav.classList.toggle("active");
+  if (nav.classList.contains("active")) {
+    nav.classList.remove("active");
+    nav.classList.add("inactive");
+  } else {
+    nav.classList.remove("inactive");
+    nav.classList.add("active");
+  }
   body.classList.toggle("active");
 });
