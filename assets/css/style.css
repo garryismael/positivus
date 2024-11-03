@@ -1020,6 +1020,7 @@ footer {
       input {
         background: transparent;
         border: 1px solid var(--white);
+        color: var(--white);
         border-radius: 14px;
         padding: 20px 25px;
         width: 100%;
