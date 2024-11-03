@@ -234,6 +234,7 @@ header nav {
 }
 
 header nav.inactive {
+  transition-delay: 100ms;
   animation: slideOut 0.6s cubic-bezier(0.62, 0.04, 0.3, 1.56) forwards;
   opacity: 0;
   width: 0;

@@ -3,6 +3,7 @@ const emblaTestimonials = document.querySelector(".testimonials .embla");
 const btnMenu = document.querySelector(".btn-menu");
 const nav = document.querySelector("nav");
 const body = document.querySelector("body");
+const navLinks = document.querySelectorAll("header nav a");
 
 const prevButtonNode = document.querySelector(".embla__prev");
 const nextButtonNode = document.querySelector(".embla__next");
@@ -92,7 +93,6 @@ const addTogglePrevNextBtnsActive = (emblaApi, prevBtn, nextBtn) => {
 };
 
 const addPrevNextBtnsClickHandlers = (emblaApi, prevBtn, nextBtn) => {
-  console.log(emblaApi, prevBtn, nextBtn);
   const scrollPrev = () => {
     emblaApi.scrollPrev();
   };
@@ -188,4 +188,13 @@ btnMenu.addEventListener("click", () => {
     nav.classList.add("active");
   }
   body.classList.toggle("active");
+});
+
+
+navLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    nav.classList.remove("active");
+    nav.classList.add("inactive");
+    body.classList.remove("active");
+  });
 });
