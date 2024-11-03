@@ -173,6 +173,22 @@ a {
   border: none;
 }
 
+.btn-dark-outline:hover {
+  color: var(--white);
+  background: var(--dark);
+}
+
+.btn-dark:hover {
+  background: transparent;
+  color: var(--dark);
+  outline: 1px solid var(--dark);
+}
+
+.btn-green:hover {
+  background: transparent;
+  color: var(--green);
+  outline: 1px solid var(--green);
+}
 .divider-y {
   display: none;
   width: 1px;
@@ -982,7 +998,7 @@ footer {
       }
     }
 
-    .contact {
+    .contact-info {
       h4 {
         color: var(--dark);
       }
@@ -1014,6 +1030,7 @@ footer {
       }
 
       button {
+        text-wrap: nowrap;
         width: 100%;
       }
     }
