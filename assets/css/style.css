@@ -290,9 +290,10 @@ header .btn-menu span.third {
   animation-delay: 250ms;
 }
 
-header nav a {
+header nav ul a {
   color: var(--dark);
   text-wrap: nowrap;
+  font-size: 16px!important;
 }
 
 header nav.active {
@@ -1348,6 +1349,10 @@ footer {
     gap: 24px;
   }
 
+  header nav ul a {
+    font-size: 20px!important;
+  }
+
   header nav ul li:last-child {
     margin: 0;
   }
@@ -1369,6 +1374,10 @@ footer {
   }
   .hero .left h1 {
     margin: 0;
+  }
+
+  .hero .left p {
+    font-size: 20px;
   }
 
   .hero .left img {
