@@ -16,11 +16,11 @@
 
 ## Live Demo
 
-You can see the live project here: [https://bit.ly/4fx3ZhA](https://bit.ly/4fx3ZhA).
+You can see the live project here: [Link](positivus-digital.netlify.app).
 
 ## Design
 
-The design was from the Figma community: [https://bit.ly/3NTotFM](https://bit.ly/3NTotFM).
+The design was from the Figma community: [Link](https://www.figma.com/community/file/1230604708032389430).
 
 **Credit:** Special thanks to **Olga Averchenko** for her exceptional design work.
 
