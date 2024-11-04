@@ -16,7 +16,7 @@
 
 ## Live Demo
 
-You can see the live project here: [Link](positivus-digital.netlify.app).
+You can see the live project here: [Link](https://positivus-digital.netlify.app).
 
 ## Design
 
